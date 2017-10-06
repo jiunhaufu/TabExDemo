@@ -2,7 +2,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="fu.alfie.com.tabexdemo.fragment.OneFragment">
+    android:id="@+id/oneFragment"
+    tools:context="fu.alfie.com.tabexdemo.fragment_main.OneFragment">
 
     <ListView
         android:id="@+id/listView_f"

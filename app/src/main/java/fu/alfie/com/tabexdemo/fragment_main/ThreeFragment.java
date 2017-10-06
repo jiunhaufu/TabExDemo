@@ -1,4 +1,4 @@
-package fu.alfie.com.tabexdemo.fragment;
+package fu.alfie.com.tabexdemo.fragment_main;
 
 
 import android.content.Context;

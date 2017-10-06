@@ -1,8 +1,10 @@
-package fu.alfie.com.tabexdemo.fragment;
+package fu.alfie.com.tabexdemo.fragment_main;
 
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,9 +20,11 @@ import java.util.List;
 import fu.alfie.com.tabexdemo.Data;
 import fu.alfie.com.tabexdemo.Item;
 import fu.alfie.com.tabexdemo.R;
+import fu.alfie.com.tabexdemo.fragment_child.ChildOneFragment;
 
 public class OneFragment extends Fragment {
     private View view;
+    private ChildOneFragment childOneFragment;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -41,6 +45,16 @@ public class OneFragment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
                 Toast.makeText(getContext(),String.valueOf(position),Toast.LENGTH_SHORT).show();
+                //點按ListItem時再開啟一層fragment
+                childOneFragment = new ChildOneFragment();
+                Bundle bundle = new Bundle();
+                bundle.putString("position", String.valueOf(position));
+                childOneFragment.setArguments(bundle); //傳入Fragment的參數
+                FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
+                fragmentTransaction
+                        .addToBackStack(null)
+                        .replace(R.id.oneFragment, childOneFragment)
+                        .commit();
             }
         });
     }
@@ -86,4 +100,5 @@ public class OneFragment extends Fragment {
             return itemView;
         }
     }
+
 }

@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="fu.alfie.com.tabexdemo.fragment.TwoFragment">
+    tools:context="fu.alfie.com.tabexdemo.fragment_main.TwoFragment">
 
     <GridView
         android:id="@+id/gridView_f"

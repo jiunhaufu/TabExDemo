@@ -5,9 +5,9 @@ import android.os.Bundle;
 import android.widget.Toast;
 
 import fu.alfie.com.tabexdemo.R;
-import fu.alfie.com.tabexdemo.fragment.OneFragment;
-import fu.alfie.com.tabexdemo.fragment.ThreeFragment;
-import fu.alfie.com.tabexdemo.fragment.TwoFragment;
+import fu.alfie.com.tabexdemo.fragment_main.OneFragment;
+import fu.alfie.com.tabexdemo.fragment_main.ThreeFragment;
+import fu.alfie.com.tabexdemo.fragment_main.TwoFragment;
 import goldzweigapps.tabs.Builder.EasyTabsBuilder;
 import goldzweigapps.tabs.Colors.EasyTabsColors;
 import goldzweigapps.tabs.Interface.TabsListener;

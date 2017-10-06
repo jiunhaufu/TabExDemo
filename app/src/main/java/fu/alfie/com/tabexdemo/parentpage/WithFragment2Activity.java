@@ -13,9 +13,9 @@ import android.view.Window;
 import android.widget.TextView;
 
 import fu.alfie.com.tabexdemo.R;
-import fu.alfie.com.tabexdemo.fragment.OneFragment;
-import fu.alfie.com.tabexdemo.fragment.ThreeFragment;
-import fu.alfie.com.tabexdemo.fragment.TwoFragment;
+import fu.alfie.com.tabexdemo.fragment_main.OneFragment;
+import fu.alfie.com.tabexdemo.fragment_main.ThreeFragment;
+import fu.alfie.com.tabexdemo.fragment_main.TwoFragment;
 
 public class WithFragment2Activity extends AppCompatActivity {
 

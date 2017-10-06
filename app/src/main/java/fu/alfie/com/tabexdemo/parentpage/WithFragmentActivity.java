@@ -8,9 +8,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import fu.alfie.com.tabexdemo.R;
-import fu.alfie.com.tabexdemo.fragment.OneFragment;
-import fu.alfie.com.tabexdemo.fragment.ThreeFragment;
-import fu.alfie.com.tabexdemo.fragment.TwoFragment;
+import fu.alfie.com.tabexdemo.fragment_main.OneFragment;
+import fu.alfie.com.tabexdemo.fragment_main.ThreeFragment;
+import fu.alfie.com.tabexdemo.fragment_main.TwoFragment;
 
 public class WithFragmentActivity extends AppCompatActivity {
 
@@ -66,6 +66,18 @@ public class WithFragmentActivity extends AppCompatActivity {
             }
         });
         mViewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(mTabLayout));
+    }
+
+    //子Fragment返回母Fragment時動作
+    @Override
+    public void onBackPressed() {
+        int count = getFragmentManager().getBackStackEntryCount();
+
+        if (count == 0) {
+            super.onBackPressed();
+        } else {
+            getFragmentManager().popBackStack();
+        }
     }
 
 
