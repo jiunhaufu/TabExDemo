@@ -4,6 +4,7 @@ package fu.alfie.com.tabexdemo.fragment_child;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
@@ -13,7 +14,7 @@ import fu.alfie.com.tabexdemo.R;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class ChildOneFragment extends Fragment {
+public class ChildOneFragment extends Fragment implements View.OnTouchListener{
 
     private View view;
     private String position;
@@ -30,6 +31,7 @@ public class ChildOneFragment extends Fragment {
         position = getArguments().getString("position");
 
         view = inflater.inflate(R.layout.fragment_child_one, container, false);
+        view.setOnTouchListener(this);
         return view;
     }
 
@@ -40,5 +42,10 @@ public class ChildOneFragment extends Fragment {
         TextView textView = (TextView) view.findViewById(R.id.child_one_fragment_textview);
         textView.setText(position);
 
+    }
+
+    @Override
+    public boolean onTouch(View view, MotionEvent motionEvent) {
+        return true;
     }
 }

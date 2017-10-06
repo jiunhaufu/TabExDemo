@@ -6,6 +6,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -22,7 +23,7 @@ import fu.alfie.com.tabexdemo.Item;
 import fu.alfie.com.tabexdemo.R;
 import fu.alfie.com.tabexdemo.fragment_child.ChildOneFragment;
 
-public class OneFragment extends Fragment {
+public class OneFragment extends Fragment{
     private View view;
     private ChildOneFragment childOneFragment;
 
@@ -61,9 +62,9 @@ public class OneFragment extends Fragment {
 
     //ListView
     private class ListViewItemAdapter extends BaseAdapter{
+
         Context context;
         List<Item> itemList;
-
         public ListViewItemAdapter(Context context, List<Item> itemList) {
             this.context = context;
             this.itemList = itemList;
@@ -99,6 +100,7 @@ public class OneFragment extends Fragment {
             textView3.setText(item.getSubtitle());
             return itemView;
         }
+
     }
 
 }

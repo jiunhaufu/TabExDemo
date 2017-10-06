@@ -6,6 +6,7 @@ import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MotionEvent;
 
 import fu.alfie.com.tabexdemo.R;
 import fu.alfie.com.tabexdemo.fragment_main.OneFragment;
