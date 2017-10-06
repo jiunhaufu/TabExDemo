@@ -41,4 +41,5 @@ public class MainActivity extends AppCompatActivity {
     public void onButton4Click(View view) {
         startActivity(new Intent(this, WithFragment2Activity.class));
     }
+
 }
